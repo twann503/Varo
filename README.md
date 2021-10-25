@@ -13,6 +13,8 @@ Build
 Starting Micro Service
 - Navigate to postgres folder
 - `docker-compose up`
+- Once docker is up, services should be up
+- Follow below for list of endpoints and paramters
 
 # REST API
 
