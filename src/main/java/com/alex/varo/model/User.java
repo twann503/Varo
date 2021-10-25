@@ -11,7 +11,7 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 @Data
-@Table(name = "users")
+@Table(name = "users", indexes = @Index(columnList = "email_address"))
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

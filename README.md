@@ -7,7 +7,7 @@ Requirements
 
 Build
 - In root project directory
-- `mvn clean package`
+- `mvn clean package -DskipTests`
 - `cp target/VaroM-1.0-SNAPSHOT.jar postgres`
 
 Starting Micro Service
