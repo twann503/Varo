@@ -2,9 +2,17 @@
 
 Requirements
  - Have Docker Installed
+ - Have Maven Installed
+    - If on Mac 'brew install maven'
 
-1. Navigate to postgres folder
-2. Run docker-compose up 
+Build
+- In root project directory
+- `mvn clean package`
+- `cp target/VaroM-1.0-SNAPSHOT.jar postgres`
+
+Starting Micro Service
+- Navigate to postgres folder
+- `docker-compose up`
 
 # REST API
 
