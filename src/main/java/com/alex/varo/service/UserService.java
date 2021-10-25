@@ -40,6 +40,13 @@ public class UserService {
      * @param user the user to create
      */
     public User createUser(User user) {
+        String email = user.getEmail();
+        List<User> res = userRepository.findByEmail(email);
+        if (!res.isEmpty()) {
+            // user with email found, should update user instead
+            Long existingUserId = res.get(0).getId();
+            user.setId(existingUserId);
+        }
         return userRepository.save(user);
     }
 

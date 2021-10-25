@@ -3,6 +3,23 @@ version: '3.1'
 
 services:
 
+  app:
+      image: 'docker-spring-boot-postgres:latest'
+      build:
+        context: .
+      container_name: app
+      ports:
+      - "8080:8080"
+      depends_on:
+        - db
+      environment:
+        spring.datasource.url: "jdbc:postgresql://db:5432/backend_test"
+        spring.datasource.username: "varo"
+        spring.datasource.password: "varo"
+        spring.jpa.hibernate.ddl-auto: "create"
+        server.address: 0.0.0.0
+
+
   db:
     image: postgres
     restart: always
